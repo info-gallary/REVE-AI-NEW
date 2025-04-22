@@ -22,3 +22,5 @@ arxiv
 pypdf
 googlesearch-python
 pycountry
+groq
+timm
