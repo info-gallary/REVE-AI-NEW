@@ -335,7 +335,7 @@ with tab1:
                     
                     agent = Agent(
                         # model=Groq(id="meta-llama/llama-4-scout-17b-16e-instruct"),
-                        model=Groq(id="llama-3.1-8b-instant"),
+                        model=Groq(id="meta-llama/llama-4-maverick-17b-128e-instruct"),
                         tools=[CsvTools(csvs=[temp_path],row_limit=11,read_csvs=True)],
                         markdown=True,
                         show_tool_calls=True,
@@ -372,7 +372,7 @@ with tab1:
                     # First agent to get initial analysis
                     agent = Agent(
                         # model=Groq(id="meta-llama/llama-4-scout-17b-16e-instruct"),
-                        model=Groq(id="llama-3.1-8b-instant"),
+                        model=Groq(id="meta-llama/llama-4-maverick-17b-128e-instruct"),
                         tools=[CsvTools(csvs=[temp_path],row_limit=11,read_csvs=True)],
                         markdown=True,
                         show_tool_calls=True,
@@ -403,7 +403,7 @@ with tab1:
                     report_agent = Agent(
                         name="Academic Paper Researcher",
                         # model=Groq(id="meta-llama/llama-4-scout-17b-16e-instruct"),
-                        model=Groq(id="llama-3.1-8b-instant"),
+                        model=Groq(id="meta-llama/llama-4-maverick-17b-128e-instruct"),
                         role="Research academic papers and scholarly content",
                         tools=[ReasoningTools(
                                 think=True,
@@ -698,7 +698,7 @@ with tab2:
                 net_agent = Agent(
                     name="Medical Imaging Expert",
                     # model=Groq(id="meta-llama/llama-4-scout-17b-16e-instruct"),
-                    model=Groq(id="llama-3.1-8b-instant"),
+                    model=Groq(id="meta-llama/llama-4-maverick-17b-128e-instruct"),
                     tools=[ArxivTools()],  
                     context={"pred": pred.content,"notes":notes,"age":age,"gender":gender},
                     add_context=True,
