@@ -371,7 +371,8 @@ with tab1:
                     
                     # First agent to get initial analysis
                     agent = Agent(
-                        model=Groq(id="meta-llama/llama-4-scout-17b-16e-instruct"),
+                        # model=Groq(id="meta-llama/llama-4-scout-17b-16e-instruct"),
+                        model=Groq(id="llama-3.1-8b-instant"),
                         tools=[CsvTools(csvs=[temp_path],row_limit=11,read_csvs=True)],
                         markdown=True,
                         show_tool_calls=True,
@@ -401,7 +402,8 @@ with tab1:
                     # Second agent for comprehensive report
                     report_agent = Agent(
                         name="Academic Paper Researcher",
-                        model=Groq(id="meta-llama/llama-4-scout-17b-16e-instruct"),
+                        # model=Groq(id="meta-llama/llama-4-scout-17b-16e-instruct"),
+                        model=Groq(id="llama-3.1-8b-instant"),
                         role="Research academic papers and scholarly content",
                         tools=[ReasoningTools(
                                 think=True,
@@ -601,6 +603,7 @@ with tab2:
                 )
                 print("diagnosis....")
                 pred: RunResponse = unhealthy_skin_agent.run("Please analyze this medical image.", images=[agno_image])
+                    # model=Groq(id="llama-3.1-8b-instant"),
 
 
                 report_agent = Agent(
