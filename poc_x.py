@@ -334,7 +334,8 @@ with tab1:
                     load_dotenv()
                     
                     agent = Agent(
-                        model=Groq(id="meta-llama/llama-4-scout-17b-16e-instruct"),
+                        # model=Groq(id="meta-llama/llama-4-scout-17b-16e-instruct"),
+                        model=Groq(id="llama-3.1-8b-instant"),
                         tools=[CsvTools(csvs=[temp_path],row_limit=11,read_csvs=True)],
                         markdown=True,
                         show_tool_calls=True,
@@ -693,7 +694,8 @@ with tab2:
                 print("report completed....")
                 net_agent = Agent(
                     name="Medical Imaging Expert",
-                    model=Groq(id="meta-llama/llama-4-scout-17b-16e-instruct"),
+                    # model=Groq(id="meta-llama/llama-4-scout-17b-16e-instruct"),
+                    model=Groq(id="llama-3.1-8b-instant"),
                     tools=[ArxivTools()],  
                     context={"pred": pred.content,"notes":notes,"age":age,"gender":gender},
                     add_context=True,
