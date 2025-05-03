@@ -404,8 +404,8 @@ with tab1:
                     # Second agent for comprehensive report
                     report_agent = Agent(
                         name="Academic Paper Researcher",
-                        # model=Groq(id="meta-llama/llama-4-scout-17b-16e-instruct"),
-                        model=Groq(id="meta-llama/llama-4-maverick-17b-128e-instruct"),
+                        model=Groq(id="meta-llama/llama-4-scout-17b-16e-instruct"),
+                        # model=Groq(id="meta-llama/llama-4-maverick-17b-128e-instruct"),
                         # model=Gemini(id="gemini-2.0-flash-exp"),    
                         role="Research academic papers and scholarly content",
                         tools=[ReasoningTools(
