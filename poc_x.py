@@ -334,9 +334,9 @@ with tab1:
                     load_dotenv()
                     
                     agent = Agent(
-                        # model=Groq(id="meta-llama/llama-4-scout-17b-16e-instruct"),
+                        model=Groq(id="meta-llama/llama-4-scout-17b-16e-instruct"),
                         # model=Groq(id="meta-llama/llama-4-maverick-17b-128e-instruct"),
-                        model=Gemini(id="gemini-2.0-flash-exp"),    
+                        # model=Gemini(id="gemini-2.0-flash-exp"),    
                         tools=[CsvTools(csvs=[temp_path],row_limit=11,read_csvs=True)],
                         markdown=True,
                         show_tool_calls=True,
@@ -372,9 +372,9 @@ with tab1:
                     
                     # First agent to get initial analysis
                     agent = Agent(
-                        # model=Groq(id="meta-llama/llama-4-scout-17b-16e-instruct"),
+                        model=Groq(id="meta-llama/llama-4-scout-17b-16e-instruct"),
                         # model=Groq(id="meta-llama/llama-4-maverick-17b-128e-instruct"),
-                        model=Gemini(id="gemini-2.0-flash-exp"),    
+                        # model=Gemini(id="gemini-2.0-flash-exp"),    
                         tools=[CsvTools(csvs=[temp_path],row_limit=11,read_csvs=True)],
                         markdown=True,
                         show_tool_calls=True,
@@ -405,7 +405,7 @@ with tab1:
                     report_agent = Agent(
                         name="Academic Paper Researcher",
                         # model=Groq(id="meta-llama/llama-4-scout-17b-16e-instruct"),
-                        # model=Groq(id="meta-llama/llama-4-maverick-17b-128e-instruct"),
+                        model=Groq(id="meta-llama/llama-4-maverick-17b-128e-instruct"),
                         model=Gemini(id="gemini-2.0-flash-exp"),    
                         role="Research academic papers and scholarly content",
                         tools=[ReasoningTools(
@@ -700,9 +700,9 @@ with tab2:
                 print("report completed....")
                 net_agent = Agent(
                     name="Medical Imaging Expert",
-                    # model=Groq(id="meta-llama/llama-4-scout-17b-16e-instruct"),
+                    model=Groq(id="meta-llama/llama-4-scout-17b-16e-instruct"),
                     # model=Groq(id="meta-llama/llama-4-maverick-17b-128e-instruct"),
-                    model=Gemini(id="gemini-2.0-flash-exp"),
+                    # model=Gemini(id="gemini-2.0-flash-exp"),
                     tools=[ArxivTools()],  
                     context={"pred": pred.content,"notes":notes,"age":age,"gender":gender},
                     add_context=True,
