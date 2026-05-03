@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVE AI - Advanced Dermatology Intelligence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <div class="custom-logo">
+                    🧬
+                </div>
+            </div>
+            <div class="brand-info">
+                <h2>REVE AI</h2>
+                <p>Advanced Dermatology Intelligence</p>
+            </div>
+            
+            <div class="input-method">
+                <h3>Choose Analysis Method:</h3>
+                <label class="radio-label">
+                    <input type="radio" name="method" value="upload" checked>
+                    <span>📤 Upload from Device</span>
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="method" value="webcam">
+                    <span>📸 Capture with Webcam</span>
+                </label>
+            </div>
+            
+            <div class="sidebar-footer">
+                <hr>
+                <p>🔬 <strong>AI-Powered Skin Analysis</strong></p>
+                <p>🎯 <strong>Deep AI Analysis</strong></p>
+                <p>📊 <strong>Professional Diagnostics</strong></p>
+                <p>⚡ <strong>Real-time Processing</strong></p>
+                <hr>
+                <div class="warning-box">
+                    ⚠️ For professional medical use only
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="premium-header">
+                <h1 class="main-title">REVE AI</h1>
+                <p class="subtitle">Agentic AI & Deep Image Analysis based</p>
+                <p class="desc">Advanced Skin Disease & Cancer Prediction Platform for Dermatologists</p>
+            </header>
+
+            <section class="upload-container floating-element" id="upload-section">
+                <h3 class="upload-title">🎯 Advanced AI Skin Diagnosis</h3>
+                <p>Upload or capture high-resolution skin images for instant AI-powered diagnosis</p>
+                
+                <div class="upload-area" id="upload-area">
+                    <div id="upload-form">
+                        <input type="file" id="file-input" accept="image/jpeg, image/png, image/jpg" hidden>
+                        <button class="btn btn-secondary" onclick="document.getElementById('file-input').click()">
+                            📂 Select Image
+                        </button>
+                    </div>
+                    
+                    <div id="webcam-form" style="display: none;">
+                        <video id="video" width="100%" autoplay playsinline></video>
+                        <button class="btn btn-secondary" id="capture-btn">📸 Capture</button>
+                        <canvas id="canvas" style="display: none;"></canvas>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Image Display -->
+            <section id="image-display-section" style="display: none;">
+                <div class="image-display-container">
+                    <div class="image-frame">
+                        <img id="preview-image" src="" alt="Skin Image">
+                    </div>
+                    <div class="image-caption">📋 Uploaded Skin Image for Analysis</div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" id="analyze-btn">🔬 ANALYZE WITH AI</button>
+                        <button class="btn btn-outline" id="reset-btn">↺ Reset</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Loading Indicator -->
+            <div id="loading-spinner" class="loading-container" style="display: none;">
+                <div class="spinner"></div>
+                <p>🧠 Processing with Advanced AI Models... Please wait 30-60 seconds for comprehensive analysis...</p>
+            </div>
+
+            <!-- Results Section -->
+            <section id="results-section" style="display: none;">
+                <div class="success-msg">✅ AI Analysis Complete! Results generated successfully.</div>
+                
+                <div class="results-grid">
+                    <!-- Left Column: Verification -->
+                    <div class="analysis-card expander">
+                        <div class="expander-header">🔍 Initial AI Assessment</div>
+                        <div class="expander-content" id="verify-content">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column: Prediction -->
+                    <div class="analysis-card expander">
+                        <div class="expander-header">🧠 Deep Learning Prediction</div>
+                        <div class="expander-content" id="prediction-content">
+                             <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Report -->
+                <div class="analysis-card expander">
+                    <div class="expander-header">📋 Comprehensive Diagnosis Report</div>
+                    <div class="expander-content" id="report-content">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <footer class="premium-footer">
+                <h3>🧬 REVE AI</h3>
+                <p><strong>© 2026 REVE AI - Professional Dermatology Intelligence Platform</strong></p>
+                <p>🏥 Exclusively designed for certified dermatologists and medical professionals</p>
+                <p>⚠️ Emergency cases require immediate consultation with healthcare specialists</p>
+                <div class="footer-bottom">
+                    <p>Powered by Advanced Deep Learning • Agentic AI Technology • Professional Grade Analysis</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+    
+    <!-- Marked.js for markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+# Datasets
+data/
+DL_models_train_test.zip
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.env
+
+# Application Storage
+database.db
+uploads/
+
+# IDE
+.vscode/
+.idea/
+
+# Agno/Gemini
+.gemini/
